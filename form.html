@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieTicket form</title>
+</head>
+<body>
+    <form name="MovieForm" action="/submit.php" onsubmit="return Validateform()" method="post"> 
+        <h1>Movie Form</h1>
+        <table style="width: 100%;">
+        <tr>
+        <td><label>Username</label>
+        <input type="text" name="Username" ></td>
+        </tr>
+        <tr>
+        <td><label>Email</label>
+        <input type="text"  name="Email"></td>
+        </tr>
+        <tr>
+         <td><label>Telephone</label>
+        <input type="text" name="Telephone"></td>
+        </tr>
+        <tr>
+        <tr>
+            <td><label>Payment Details</label>
+            <select name="Payment Details" id="Details">
+                <option>Card Number</option> 
+                <option>Name on Card</option> 
+                <option>Expiry Date</option> 
+                <option>Cvv Number</option> 
+            </select> 
+        <tr>
+        <tr>
+           <td><input type="submit"  value="submit" name="Submit"></td>
+        </tr>
+    </form> 
+</body>
+</html>
