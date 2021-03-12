@@ -5,6 +5,8 @@ var joinForm = function () {
     var name = $("name");
     var email = $("email");
     var number = $("number");
+    var details = $("details");
+    
     var isValid = true;
     
     // validate the first entry
@@ -40,6 +42,17 @@ var joinForm = function () {
     if (isValid) {
         $("Ticket_form").submit(); 
     }
+    // validate the fourth entry
+    if (details.value == "") { 
+        number.nextElementSibling.firstChild.nodeValue = 
+            "This field is required.";
+        isValid = false;
+    } else {
+        number.nextElementSibling.firstChild.nodeValue = "";
+    } 
+    if (isValid) {
+        $("Ticket_form").submit(); 
+    }
 }
 window.onload = function () {
     $("join_form").onclick = joinForm;
@@ -52,6 +65,10 @@ window.onload = function () {
 window.onload = function () {
     $("join_form").onclick = joinForm;
     $("number").focus();
+ }
+ window.onload = function () {
+    $("join_form").onclick = joinForm;
+    $("details").focus();
  } 
      
      
